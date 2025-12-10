@@ -1,0 +1,50 @@
+baseURL: "http://localhost:1313/"
+languageCode: "en-us"
+title: "Terminally Educated"
+theme: "blowfish"
+
+# Enable emoji support
+enableEmoji: true
+
+# Permalinks
+permalinks:
+  blog: /blog/:year/:month/:slug/
+  project: /project/:slug/
+
+# Markup settings
+markup:
+  goldmark:
+    renderer:
+      unsafe: true  # Allow HTML in markdown
+  highlight:
+    codeFences: true
+    style: monokai
+    lineNos: false
+    lineNumbersInTable: false
+
+# Menu configuration
+menu:
+  header:
+    - name: About
+      url: /about/
+      weight: 1
+    - name: Blog
+      url: /blog/
+      weight: 2
+    - name: Research
+      url: /research/
+      weight: 3
+    - name: Publications
+      url: /publications/
+      weight: 4
+    - name: Contact
+      url: /contact/
+      weight: 5
+  
+  footer:
+    - name: License
+      url: /license/
+      weight: 1
+    - name: RSS
+      url: /index.xml
+      weight: 2
